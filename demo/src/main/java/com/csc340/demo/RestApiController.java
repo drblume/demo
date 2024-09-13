@@ -17,6 +17,12 @@ import java.util.logging.Logger;
 @RestController
 public class RestApiController {
 
+    /**
+     * Get a pokemon's id, height, and weight from pokeapi.
+     *
+     * @param pokemonName
+     * @return a Pokemon object.
+     */
     @GetMapping("/pokemon")
     public Object getPokemon(@RequestParam(value = "name", defaultValue = "charizard") String pokemonName){
         try{
